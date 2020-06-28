@@ -1,12 +1,16 @@
 *node_modules/
 *scripts/
 *.eslintrc.js
+*.eslintrc
+*.gitignore
+*.prettierrc
 *.npmignore
 *.babelrc
 *package.json
 *package-lock.json
 *webpack.config.js
 *dist
+*.eslintignore
 *.eslintignore
 _template/
 *bundle/
