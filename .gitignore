@@ -1,0 +1,13 @@
+*node_modules/
+*scripts/
+*.eslintrc.js
+*.npmignore
+*.babelrc
+*package.json
+*package-lock.json
+*webpack.config.js
+*dist
+*.eslintignore
+_template/
+*bundle/
+*reference
