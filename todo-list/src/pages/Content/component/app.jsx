@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../content.styles.css';
-import {getRecords} from 'common/util';
+
 const Todo = ({ todo, index, completeTodo, removeTodo }) => {
   return (
     <div
@@ -37,7 +37,7 @@ const TodoForm = ({ addTodo }) => {
   )
 }
 
-const App = async () => {
+const App = () => {
   const [todos, setTodos] = useState([
     {
       text: '1',

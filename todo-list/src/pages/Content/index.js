@@ -1,10 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
-import {
-  render
-} from 'react-dom';
+import { render } from 'react-dom';
 import App from './component/app';
 
+console.log('This is the content page.');
 const initTodo = () => {
   // Get space element in Kintone portal
   const portalSpace = document.querySelector('.kintone-portal-content-space');
@@ -25,6 +24,7 @@ const observer = new MutationObserver(function (mutations) {
       if (node && $(node)[0].childNodes.length) {
         if ($(node)[0].className === 'ocean-portal-index') {
           // observer.disconnect();
+          chrome.runtime.sendMessage({message: 'initialize the todo list'});
           initTodo();
         }
       }
@@ -37,11 +37,3 @@ observer.observe(document.body, { //document.body is node target to observe
   childList: true, //This is a must have for the observer with subtree
   subtree: true //Set to true if changes must also be observed in descendants.
 });
-
-
-
-
-
-
-
-
